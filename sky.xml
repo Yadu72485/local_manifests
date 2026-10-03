@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Device Tree (Branch 16) -->
+    <project name="Yadu72485/device_xiaomi_sky" path="device/xiaomi/sky" remote="github" revision="16" />
+
+    <!-- Vendor Tree (Branch 16) -->
+    <project name="Yadu72485/vendor_xiaomi_sky" path="vendor/xiaomi/sky" remote="github" revision="16" />
+
+    <!-- Kernel Tree (Branch 16) -->
+    <project name="Yadu72485/device_xiaomi_sky-kernel" path="device/xiaomi/sky-kernel" remote="github" revision="16" />
+
+    <!-- Xiaomi Hardware HALs (LineageOS A16 branch) -->
+    <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-23.2" />
+</manifest>
