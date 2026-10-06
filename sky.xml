@@ -12,9 +12,6 @@
     <!-- Xiaomi Hardware Tree -->
     <project name="LineageOS/android_hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="lineage-23.2" />
 
-    <!-- Qualcomm Audio HAL -->
-    <project name="Yadu72485/hardware_qcom_audio" path="hardware/qcom-caf/sm8450/audio" remote="github" revision="uvite-8450" />
-
     <!-- Dolby Atmos (Branch a) -->
     <project name="Yadu72485/hardware_dolby" path="hardware/dolby" remote="github" revision="a" />
 </manifest>
