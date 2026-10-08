@@ -42,4 +42,10 @@
         path="hardware/lineage/compat"
         remote="sky-remote"
         revision="lineage-23.2" />
-</manifest>
+
+<!-- Qualcomm libvmmem for Display Snapalloc -->
+    <project path="vendor/qcom/opensource/libvmmem"
+        name="Yadu72485/android_vendor_qcom_opensource_libvmmem"
+        remote="sky-remote"
+        revision="lineage-23.2" />
+  </manifest>  
