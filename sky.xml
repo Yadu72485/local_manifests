@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+    <!-- Remote GitHub -->
+    <remote name="github" fetch="https://github.com" />
+
     <!-- Device Tree (Branch 16) -->
     <project name="Yadu72485/device_xiaomi_sky" path="device/xiaomi/sky" remote="github" revision="16" />
 
@@ -14,4 +17,8 @@
 
     <!-- Dolby Atmos (Branch a) -->
     <project name="Yadu72485/hardware_dolby" path="hardware/dolby" remote="github" revision="a" />
+
+    <!-- Permanent Fix: Lineage Compat without duplicate Protobuf -->
+    <remove-project name="LineageOS/android_hardware_lineage_compat" />
+    <project name="Yadu72485/android_hardware_lineage_compat" path="hardware/lineage/compat" remote="github" revision="lineage-23.2" />
 </manifest>
