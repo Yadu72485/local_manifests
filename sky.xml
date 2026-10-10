@@ -24,7 +24,7 @@
         remote="sky-remote"
         revision="16" />
 
-    <!-- Xiaomi Hardware Tree (Aapka Forked Repo) -->
+    <!-- Xiaomi Hardware Tree -->
     <project name="Yadu72485/android_hardware_xiaomi"
         path="hardware/xiaomi"
         remote="sky-remote"
@@ -42,10 +42,4 @@
         path="hardware/lineage/compat"
         remote="sky-remote"
         revision="lineage-23.2" />
-
-<!-- Qualcomm libvmmem for Display Snapalloc -->
-    <project path="vendor/qcom/opensource/libvmmem"
-        name="Yadu72485/android_vendor_qcom_opensource_libvmmem"
-        remote="sky-remote"
-        revision="lineage-23.2" />
-  </manifest>  
+</manifest>
