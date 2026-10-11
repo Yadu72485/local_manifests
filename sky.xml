@@ -3,7 +3,7 @@
     <!-- Remote GitHub -->
     <remote name="sky-remote" fetch="https://github.com" />
 
-    <!-- Permanent Fix: Remove Cuttlefish (Emulator not needed for physical device) -->
+    <!-- Permanent Fix: Remove Cuttlefish -->
     <remove-project name="device/google/cuttlefish" />
 
     <!-- Device Tree (Branch 16) -->
@@ -36,10 +36,17 @@
         remote="sky-remote"
         revision="a" />
 
-    <!-- Permanent Fix: Lineage Compat without duplicate Protobuf -->
+    <!-- Permanent Fix 1: Lineage Compat without duplicate Protobuf -->
     <remove-project name="LineageOS/android_hardware_lineage_compat" />
     <project name="Yadu72485/android_hardware_lineage_compat"
         path="hardware/lineage/compat"
+        remote="sky-remote"
+        revision="lineage-23.2" />
+
+    <!-- Permanent Fix 2: Lineage Interfaces (Charging Control Cflags Fix) -->
+    <remove-project name="LineageOS/android_hardware_lineage_interfaces" />
+    <project path="hardware/lineage/interfaces"
+        name="Yadu72485/android_hardware_lineage_interfaces"
         remote="sky-remote"
         revision="lineage-23.2" />
 </manifest>
