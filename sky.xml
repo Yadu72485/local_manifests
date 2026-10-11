@@ -1,52 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <!-- Remote GitHub -->
-    <remote name="sky-remote" fetch="https://github.com" />
+  <!-- Remote GitHub -->
+  <remote name="sky-remote" fetch="https://github.com" />
 
-    <!-- Permanent Fix: Remove Cuttlefish -->
-    <remove-project name="device/google/cuttlefish" />
+  <!-- Device Tree (Android 16) -->
+  <project path="device/xiaomi/sky"
+           name="Yadu72485/device_xiaomi_sky"
+           remote="sky-remote"
+           revision="16" />
 
-    <!-- Device Tree (Branch 16) -->
-    <project name="Yadu72485/device_xiaomi_sky"
-        path="device/xiaomi/sky"
-        remote="sky-remote"
-        revision="16" />
+  <!-- Vendor Blobs (Android 16) -->
+  <project path="vendor/xiaomi/sky"
+           name="Yadu72485/vendor_xiaomi_sky"
+           remote="sky-remote"
+           revision="16" />
 
-    <!-- Vendor Tree (Branch 16) -->
-    <project name="Yadu72485/vendor_xiaomi_sky"
-        path="vendor/xiaomi/sky"
-        remote="sky-remote"
-        revision="16" />
+  <!-- Kernel Tree (Android 16) -->
+  <project path="device/xiaomi/sky-kernel"
+           name="Yadu72485/device_xiaomi_sky-kernel"
+           remote="sky-remote"
+           revision="16" />
 
-    <!-- Kernel Tree (Branch 16) -->
-    <project name="Yadu72485/device_xiaomi_sky-kernel"
-        path="device/xiaomi/sky-kernel"
-        remote="sky-remote"
-        revision="16" />
+  <!-- Dolby Hardware Dependency -->
+  <project path="hardware/dolby"
+           name="Yadu72485/hardware_dolby"
+           remote="sky-remote"
+           revision="a" />
 
-    <!-- Xiaomi Hardware Tree -->
-    <project name="Yadu72485/android_hardware_xiaomi"
-        path="hardware/xiaomi"
-        remote="sky-remote"
-        revision="lineage-23.2" />
+  <!-- Xiaomi Hardware Dependency -->
+  <project path="hardware/xiaomi"
+           name="Yadu72485/android_hardware_xiaomi"
+           remote="sky-remote"
+           revision="lineage-23.2" />
 
-    <!-- Dolby Atmos (Branch a) -->
-    <project name="Yadu72485/hardware_dolby"
-        path="hardware/dolby"
-        remote="sky-remote"
-        revision="a" />
+  <!-- Permanent Fix: Lineage Interfaces (Health Service Cflags Fix) -->
+  <remove-project name="LineageOS/android_hardware_lineage_interfaces" />
+  <project path="hardware/lineage/interfaces"
+           name="Yadu72485/android_hardware_lineage_interfaces"
+           remote="sky-remote"
+           revision="lineage-23.2" />
 
-    <!-- Permanent Fix 1: Lineage Compat without duplicate Protobuf -->
-    <remove-project name="LineageOS/android_hardware_lineage_compat" />
-    <project name="Yadu72485/android_hardware_lineage_compat"
-        path="hardware/lineage/compat"
-        remote="sky-remote"
-        revision="lineage-23.2" />
-
-    <!-- Permanent Fix 2: Lineage Interfaces (Charging Control Cflags Fix) -->
-    <remove-project name="LineageOS/android_hardware_lineage_interfaces" />
-    <project path="hardware/lineage/interfaces"
-        name="Yadu72485/android_hardware_lineage_interfaces"
-        remote="sky-remote"
-        revision="lineage-23.2" />
+  <!-- Permanent Fix: Remove Unused Google Virtual Emulators -->
+  <remove-project name="device/google/cuttlefish" />
+  <remove-project name="device/google/cuttlefish_vmm" />
+  <remove-project name="device/google/trout" />
 </manifest>
